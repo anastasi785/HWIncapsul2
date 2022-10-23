@@ -10,7 +10,7 @@ public class Car {
             if (expiringDate != null && !expiringDate.isEmpty()) {
                 this.expiringDate = expiringDate;
             } else {
-                this.expiringDate = "пора делать новую";
+                this.expiringDate = "делать новую";
                 this.price = price;
                 this.number = number;
             }
