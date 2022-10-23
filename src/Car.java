@@ -11,7 +11,7 @@ public class Car {
         int number;
         private int numberOfSeats;
         String signSummerOrWinterTires;
-        public Car(String gearBox){
+        public Car(String brand,String model,String productionCountry,String color,double engineVolume,int productionYear,String gearBox,String typeOfCarcase){
             this.brand=brand;
             this.model=model;
             this.productionCountry=productionCountry;
@@ -23,26 +23,49 @@ public class Car {
             }else{
                 this.gearBox="Автомат";
             }
+            if(typeOfCarcase!=null&&!typeOfCarcase.isEmpty()) {
+                this.typeOfCarcase = typeOfCarcase;
+            }else {
+                this.typeOfCarcase = "Пластик";
+            }
+            this.number=number;
+            this.numberOfSeats=numberOfSeats;
+            if(signSummerOrWinterTires!=null&&!signSummerOrWinterTires.isEmpty()) {
+                this.signSummerOrWinterTires = signSummerOrWinterTires;
+            }else{
+                this.signSummerOrWinterTires="демисезонные";
+            }
+
         }
 
-        public Car (String brand,String model,String productionCountry,String color, double engineVolume,int productionYear){
-            this.brand=brand;
-            this.model=model;
-            this.productionCountry=productionCountry;
-            this.color=color;
-            this.engineVolume=engineVolume;
-            this.productionYear=productionYear;
 
-        }
-        public Car (String brand,String model,String productionCountry,String color, int productionYear) {
+
+        public Car (String brand, String model, String productionCountry, double engineVolume, int productionYear, String gearBox, String typeOfCarcase, int number, int numberOfSeats, String signSummerOrWinterTires) {
             this.brand = brand;
             this.model = model;
             this.productionCountry = productionCountry;
             this.color = color;
             engineVolume = 1.5;
             this.productionYear = productionYear;
+            if(gearBox!=null&&!gearBox.isEmpty()) {
+                this.gearBox = gearBox;
+            }else{
+                this.gearBox="Автомат";
+            }
+            if(typeOfCarcase!=null&&!typeOfCarcase.isEmpty()) {
+                this.typeOfCarcase = typeOfCarcase;
+            }else {
+                this.typeOfCarcase = "Пластик";
+            }
+            this.number=number;
+            this.numberOfSeats=numberOfSeats;
+            if(signSummerOrWinterTires!=null&&!signSummerOrWinterTires.isEmpty()) {
+                this.signSummerOrWinterTires = signSummerOrWinterTires;
+            }else{
+                this.signSummerOrWinterTires="демисезонные";
+            }
         }
-        public Car (String brand,String model,String productionCountry, double engineVolume,int productionYear){
+        public Car (String brand, String model, String productionCountry, String color, double volume, double engineVolume, String gearBox, String typeOfCarcase, int productionYear, int numberOfSeats, String signSummerOrWinterTires){
             this.brand=brand;
             this.model=model;
             this.productionCountry=productionCountry;
@@ -50,21 +73,55 @@ public class Car {
             this.engineVolume=engineVolume;
             this.productionYear=productionYear;
         }
-        public Car (String brand,String model,String productionCountry, String color,double engineVolume) {
+        public Car (String brand, String model, String productionCountry, String color, double engineVolume, String gearBox, String typeOfCarcase, int number, int numberOfSeats, String signSummerOrWinterTires) {
             this.brand = brand;
             this.model = model;
             this.productionCountry = productionCountry;
             this.color=color;
             this.engineVolume = engineVolume;
-            productionYear = 2000;
+            this.productionYear = 2000;
+            if(gearBox!=null&&!gearBox.isEmpty()) {
+                this.gearBox = gearBox;
+            }else{
+                this.gearBox="Автомат";
+            }
+            if(typeOfCarcase!=null&&!typeOfCarcase.isEmpty()) {
+                this.typeOfCarcase = typeOfCarcase;
+            }else {
+                this.typeOfCarcase = "Пластик";
+            }
+            this.number=number;
+            this.numberOfSeats=numberOfSeats;
+            if(signSummerOrWinterTires!=null&&!signSummerOrWinterTires.isEmpty()) {
+                this.signSummerOrWinterTires = signSummerOrWinterTires;
+            }else{
+                this.signSummerOrWinterTires="демисезонные";
+            }
         }
-        public Car(double engineVolume, String color, int productionYear){
+        public Car(double engineVolume, String color, int productionYear,String gearBox,String typeOfCarcase,int number,int numberOfSeats,String signSummerOrWinterTires){
             brand="default";
             model="default";
             productionCountry="default";
             this.color=color;
             this.engineVolume=engineVolume;
             this.productionYear=productionYear;
+            if(gearBox!=null&&!gearBox.isEmpty()) {
+                this.gearBox = gearBox;
+            }else{
+                this.gearBox="Автомат";
+            }
+            if(typeOfCarcase!=null&&!typeOfCarcase.isEmpty()) {
+                this.typeOfCarcase = typeOfCarcase;
+            }else {
+                this.typeOfCarcase = "Пластик";
+            }
+            this.number=number;
+            this.numberOfSeats=numberOfSeats;
+            if(signSummerOrWinterTires!=null&&!signSummerOrWinterTires.isEmpty()) {
+                this.signSummerOrWinterTires = signSummerOrWinterTires;
+            }else{
+                this.signSummerOrWinterTires="демисезонные";
+            }
 
         }
 
@@ -134,6 +191,7 @@ public class Car {
 
         void information(){
             System.out.println("Mарка "+ brand+" Модель "+model+" Страна производства "+productionCountry+" Цвет кузова "+color+" Объем двигателя в литрах "+engineVolume+" Год производства "+productionYear);
+            System.out.println(" Коробка передач "+gearBox+" Тип кузова "+typeOfCarcase+" Регистрационный номер "+number+" Количество мест "+numberOfSeats+" признак «Летняя» или «Зимняя резина "+signSummerOrWinterTires);
         }
     }
 
