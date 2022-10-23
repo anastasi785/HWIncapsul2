@@ -1,3 +1,5 @@
+package Transport;
+
 public class Car {
     public static class Inshurance {
         private String expiringDate;
@@ -253,7 +255,7 @@ public class Car {
         return insh;
     }
 
-    void information() {
+    public void information() {
             System.out.println("Mарка " + brand + " Модель " + model + " Страна производства " + productionCountry + " Цвет кузова " + color + " Объем двигателя в литрах " + engineVolume + " Год производства " + productionYear);
             System.out.println(" Коробка передач " + gearBox + " Тип кузова " + typeOfCarcase + " Регистрационный номер " + number + " Количество мест " + numberOfSeats + " признак Летняя или Зимняя резина " + signSummerOrWinterTires);
         }
