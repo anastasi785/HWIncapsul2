@@ -2,13 +2,11 @@ package Transport;
 
 import java.time.LocalDate;
 
-public class Car {
-    private final String brand;
-    private final String model;
+public class Car extends Transport {
+
     private float engineVolume;
-    private String color;
-    private final int manufacturingYear;
-    private final String manufactureCountry;
+
+
 
     private String gearBox;
     private final String bodyType;
@@ -27,22 +25,15 @@ public class Car {
                String gearBox, String bodyType,
                String regNumber,int placesCount,
                Key key, Insurance insurance) {
-        this.brand = validofDefault(brand, "default");
-        this.model = validofDefault(model, "default");
-        if (manufacturingYear >= 0) {
-            this.manufacturingYear = manufacturingYear;
-        } else {
-            this.manufacturingYear = 2000;
-        }
-        this.manufactureCountry = validofDefault(manufactureCountry, "russia");
+        super(brand,model,manufacturingYear,manufactureCountry,color,0);
+
         this.bodyType = validofDefault(bodyType, "default");
 
         this.placesCount = Math.max(placesCount, 1);
-        this.winterTires = winterTires;
+
         this.key = key;
         this.insurance = insurance;
         setEngineVolume(engineVolume);
-        setColor(color);
         setGearBox(gearBox);
         setRegNumber(regNumber);
         setWinterTires(winterTires);
@@ -93,13 +84,7 @@ public class Car {
         this.engineVolume = engineVolume >= 0.0f ? engineVolume : 1.5f;
     }
 
-    public void setColor(String color) {
-        if (color == null || !color.isBlank()) {
-            this.color = "white";
-        } else {
-            this.color = color;
-        }
-    }
+
 
     public void setGearBox(String gearBox) {
         if (gearBox == null || !gearBox.isBlank()) {
@@ -133,6 +118,14 @@ public class Car {
         public boolean isKeyLessAccess() {
             return keyLessAccess;
         }
+
+        @Override
+        public String toString() {
+            return "Key{" +
+                    "remoteEngineStart=" + remoteEngineStart +
+                    ", keyLessAccess=" + keyLessAccess +
+                    '}';
+        }
     }
 
     public static class Insurance {
@@ -158,31 +151,24 @@ public class Car {
         public boolean isInshuranceValid() {
             return LocalDate.now().isBefore(this.validUntil);
         }
+
+        @Override
+        public String toString() {
+            return "Insurance{" +
+                    "validUntil=" + validUntil +
+                    ", cost=" + cost +
+                    ", number='" + number + '\'' +
+                    '}';
+        }
     }
 
-    public String getBrand() {
-        return brand;
-    }
 
-    public String getModel() {
-        return model;
-    }
 
     public float getEngineVolume() {
         return engineVolume;
     }
 
-    public String getColor() {
-        return color;
-    }
 
-    public int getManufacturingYear() {
-        return manufacturingYear;
-    }
-
-    public String getManufactureCountry() {
-        return manufactureCountry;
-    }
 
     public String getGearBox() {
         return gearBox;
@@ -215,12 +201,12 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
+                "brand='" + getBrand() + '\'' +
+                ", model='" + getModel() + '\'' +
                 ", engineVolume=" + engineVolume +
-                ", color='" + color + '\'' +
-                ", manufacturingYear=" + manufacturingYear +
-                ", manufactureCountry='" + manufactureCountry + '\'' +
+                ", color='" + getColor() + '\'' +
+                ", manufacturingYear=" + getManufacturingYear() +
+                ", manufactureCountry='" + getManufactureCountry() + '\'' +
                 ", gearBox='" + gearBox + '\'' +
                 ", bodyType='" + bodyType + '\'' +
                 ", regNumber='" + regNumber + '\'' +
