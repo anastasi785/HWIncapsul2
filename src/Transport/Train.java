@@ -8,9 +8,14 @@ public class Train extends Transport {
       private int numbersOfCars;
 
     public Train(String brand, String model, int manufacturingYear, String manufactureCountry, String color, int maxSpeed,int price, int timeOfJorney, String stationOfTakingOff, String stationOfArriving, int numbersOfCars) {
-        super(brand,model,manufacturingYear,manufactureCountry,color,0);
+        super(brand, model, manufacturingYear, manufactureCountry, color, 0);
         this.price = price;
-        this.timeOfJorney = timeOfJorney;
+        if (timeOfJorney <= 0) {
+            this.timeOfJorney = 6;
+
+    }else{
+            this.timeOfJorney=timeOfJorney;}
+
         this.stationOfTakingOff = validofDefault(stationOfTakingOff,"defalt");
         this.stationOfArriving = validofDefault(stationOfArriving,"defalt");
         this.numbersOfCars = numbersOfCars;
