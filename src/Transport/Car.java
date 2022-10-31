@@ -41,14 +41,6 @@ public class Car extends Transport {
 
 
 
-    private String validofDefault(String value, String defaultValue) {
-        if (value == null || value.isBlank()) {
-            return defaultValue;
-        } else {
-            return value;
-        }
-    }
-
     public void setSeasonTires() {
         int currentMonth = LocalDate.now().getDayOfMonth();
         this.winterTires = currentMonth <= 4 || currentMonth >= 11;
@@ -87,10 +79,10 @@ public class Car extends Transport {
 
 
     public void setGearBox(String gearBox) {
-        if (gearBox == null || !gearBox.isBlank()) {
-            this.gearBox = "No information";
-        } else {
+        if (gearBox != null && !gearBox.isBlank()) {
             this.gearBox = gearBox;
+        } else {
+            this.gearBox = "No information";
         }
     }
 
