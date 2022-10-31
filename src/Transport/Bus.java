@@ -5,4 +5,9 @@ public class Bus extends Transport {
         super(brand, model, manufacturingYear, manufactureCountry, color, maxSpeed);
     }
 
+    @Override
+    public void refill() {
+        System.out.println("заправлять бензином или дизелем на заправке.");
+    }
+
 }

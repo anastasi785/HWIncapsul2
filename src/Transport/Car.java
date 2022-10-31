@@ -191,6 +191,12 @@ public class Car extends Transport {
     }
 
     @Override
+    public void refill() {
+        System.out.println("заправлять бензином, дизелем на заправке " +
+                "или заряжать на специальных электропарковках, если это электрокар.");
+    }
+
+    @Override
     public String toString() {
         return "Car{" +
                 "brand='" + getBrand() + '\'' +

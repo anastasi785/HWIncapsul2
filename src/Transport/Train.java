@@ -21,6 +21,7 @@ public class Train extends Transport {
         this.numbersOfCars = numbersOfCars;
     }
 
+
     public int getPrice() {
         return price;
     }
@@ -59,6 +60,11 @@ public class Train extends Transport {
 
     public void setNumbersOfCars(int numbersOfCars) {
         this.numbersOfCars = numbersOfCars;
+    }
+
+    @Override
+    public void refill() {
+        System.out.println("нужно заправлять дизелем");
     }
 
     @Override

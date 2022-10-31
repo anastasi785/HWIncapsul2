@@ -21,6 +21,10 @@ public class Main {
         Bus ikarus=new Bus("Ikarus","f-150",1987,"Russia","Orange",300);
         System.out.println(ikarus.toString());
 
+        lada.refill();
+        lastochka.refill();
+        ikarus.refill();
+
 
 
     }
