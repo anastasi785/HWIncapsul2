@@ -39,6 +39,14 @@ public class Main {
         Trucks bmw=new Trucks("Bmw","547-t",2.0f);
         System.out.println(bmw);
 
+        bmw.bestLapTime();
+
+        kia.maxSpeed();
+
+        System.out.println(liaz.pitStop());
+
+        kia.pitStop();
+
 
     }
 
