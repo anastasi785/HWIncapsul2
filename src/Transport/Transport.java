@@ -72,18 +72,24 @@ public abstract class Transport {
         this.maxSpeed = maxSpeed;
     }
 
+//    @Override
+//    public String toString() {
+ //       return "Transport{" +
+ //               "brand='" + brand + '\'' +
+ //               ", model='" + model + '\'' +
+ //               ", manufacturingYear=" + manufacturingYear +
+ //               ", manufactureCountry='" + manufactureCountry + '\'' +
+ //               ", color='" + color + '\'' +
+//                ", maxSpeed=" + maxSpeed +
+//                '}';
+  //  }
+
+
     @Override
     public String toString() {
-        return "Transport{" +
+        return
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", manufacturingYear=" + manufacturingYear +
-                ", manufactureCountry='" + manufactureCountry + '\'' +
-                ", color='" + color + '\'' +
-                ", maxSpeed=" + maxSpeed +
                 '}';
     }
-
-
-
 }

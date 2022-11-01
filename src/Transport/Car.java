@@ -204,22 +204,30 @@ public abstract class Car extends Transport {
                 "или заряжать на специальных электропарковках, если это электрокар.");
     }
 
+ //   @Override
+  //  public String toString() {
+ //       return "Car{" +
+ //               "brand='" + getBrand() + '\'' +
+ //               ", model='" + getModel() + '\'' +
+//                ", engineVolume=" + engineVolume +
+ //               ", color='" + getColor() + '\'' +
+ //               ", manufacturingYear=" + getManufacturingYear() +
+ //               ", manufactureCountry='" + getManufactureCountry() + '\'' +
+//                ", gearBox='" + gearBox + '\'' +
+//                ", bodyType='" + bodyType + '\'' +
+//                ", regNumber='" + regNumber + '\'' +
+//                ", placesCount=" + placesCount +
+ //               ", winterTires=" + winterTires +
+ //               ", key=" + key +
+//               ", insurance=" + insurance +
+ //               '}';
+ //   }
+
     @Override
     public String toString() {
-        return "Car{" +
-                "brand='" + getBrand() + '\'' +
-                ", model='" + getModel() + '\'' +
-                ", engineVolume=" + engineVolume +
-                ", color='" + getColor() + '\'' +
-                ", manufacturingYear=" + getManufacturingYear() +
-                ", manufactureCountry='" + getManufactureCountry() + '\'' +
-                ", gearBox='" + gearBox + '\'' +
-                ", bodyType='" + bodyType + '\'' +
-                ", regNumber='" + regNumber + '\'' +
-                ", placesCount=" + placesCount +
-                ", winterTires=" + winterTires +
-                ", key=" + key +
-                ", insurance=" + insurance +
+        System.out.println(super.toString());
+        return
+                "engineVolume=" + engineVolume +
                 '}';
     }
 }
