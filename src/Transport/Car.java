@@ -2,21 +2,21 @@ package Transport;
 
 import java.time.LocalDate;
 
-public class Car extends Transport {
+public abstract class Car extends Transport {
 
     private float engineVolume;
 
 
 
     private String gearBox;
-    private final String bodyType;
+    private  String bodyType;
     private String regNumber;
-    private final int placesCount;
+    private  int placesCount;
     private boolean winterTires;
 
 
-    private final Key key;
-    private final Insurance insurance;
+    private  Key key;
+    private  Insurance insurance;
 
     public Car(String brand, String model,
                float engineVolume, String color,
@@ -39,6 +39,14 @@ public class Car extends Transport {
         setWinterTires(winterTires);
     }
 
+    public Car(String brand, String model, float engineVolume) {
+        super(brand,model);
+       setEngineVolume(engineVolume);
+    }
+     public abstract void startOfMoving();
+
+
+    public abstract void stopMoving();
 
 
     public void setSeasonTires() {

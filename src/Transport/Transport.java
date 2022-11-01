@@ -3,13 +3,15 @@ package Transport;
 public abstract class Transport {
     private String brand;
     private String model;
-    private final int manufacturingYear;
-    private final String manufactureCountry;
+    private  int manufacturingYear;
+    private  String manufactureCountry;
     private String color;
     private int maxSpeed;
 
-
-
+    public Transport(String brand, String model) {
+    this.brand=this.brand = validofDefault(brand, "defalt");
+    this.model = validofDefault(model, "default");
+    }
 
 
     protected String validofDefault(String value, String defaultValue) {
@@ -81,4 +83,7 @@ public abstract class Transport {
                 ", maxSpeed=" + maxSpeed +
                 '}';
     }
+
+
+
 }
