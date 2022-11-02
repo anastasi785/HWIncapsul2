@@ -28,24 +28,27 @@ public class Main {
 
 
 
-        Bus1 liaz=new Bus1("Liaz","f-150", 1.6f);
-        System.out.println(liaz);
-        liaz.stopMoving();
+ //       Bus1 liaz=new Bus1("Liaz","f-150", 1.6f);
+//        System.out.println(liaz);
+ //       liaz.stopMoving();
 
 
-        PassengerCar kia=new PassengerCar("Kia","Sefia",1.8f);
-        System.out.println(kia);
+ //       PassengerCar kia=new PassengerCar("Kia","Sefia",1.8f);
+//        System.out.println(kia);
 
-        Trucks bmw=new Trucks("Bmw","547-t",2.0f);
-        System.out.println(bmw);
+//        Trucks bmw=new Trucks("Bmw","547-t",2.0f);
+//        System.out.println(bmw);
 
-        bmw.bestLapTime();
+  //      bmw.bestLapTime();
 
-        kia.maxSpeed();
+//        kia.maxSpeed();
 
-        System.out.println(liaz.pitStop());
+//        System.out.println(liaz.pitStop());
 
-        kia.pitStop();
+//        kia.pitStop();
+
+        DriverC oleg=new DriverC("Oleg","yes",4.5);
+
 
 
     }
