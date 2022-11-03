@@ -1,6 +1,6 @@
 package Transport;
 
-public class Trucks extends Car implements Competitors{
+public class Trucks extends Car implements Driving{
     public Trucks(String brand, String model, float engineVolume) {
         super(brand, model, engineVolume);
     }
@@ -22,20 +22,35 @@ public class Trucks extends Car implements Competitors{
         return super.toString();
     }
 
-    @Override
+  //  @Override
     public String pitStop() {
         return "Сделать остановку";
     }
 
-    @Override
+ //   @Override
     public void bestLapTime() {
         System.out.println("В пределах 56 сек");
 
     }
 
-    @Override
+  //  @Override
     public void maxSpeed() {
         System.out.println(" Максимальная скорость составляет 150 км/ч");
+
+    }
+
+    @Override
+    public void startToDrive() {
+
+    }
+
+    @Override
+    public void stopToDrive() {
+
+    }
+
+    @Override
+    public void refillCar() {
 
     }
 }

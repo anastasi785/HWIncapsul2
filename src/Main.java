@@ -28,15 +28,15 @@ public class Main {
 
 
 
- //       Bus1 liaz=new Bus1("Liaz","f-150", 1.6f);
+        Bus1 liaz=new Bus1("Liaz","f-150", 1.6f);
 //        System.out.println(liaz);
  //       liaz.stopMoving();
 
 
- //       PassengerCar kia=new PassengerCar("Kia","Sefia",1.8f);
+        PassengerCar kia=new PassengerCar("Kia","Sefia",1.8f);
 //        System.out.println(kia);
 
-//        Trucks bmw=new Trucks("Bmw","547-t",2.0f);
+       Trucks bmw=new Trucks("Bmw","547-t",2.0f);
 //        System.out.println(bmw);
 
   //      bmw.bestLapTime();
@@ -47,7 +47,18 @@ public class Main {
 
 //        kia.pitStop();
 
-        DriverC oleg=new DriverC("Oleg","yes",4.5);
+
+
+        DriverB<PassengerCar>nick=new DriverB<>("Nick","B","4");
+        nick.drive(kia);
+
+        DriverC<Trucks>ed=new DriverC<>("Ed","C","5");
+        ed.drive(bmw);
+
+        DriverD<Bus1>fil=new DriverD<>("Fil","D","7.4");
+        fil.drive(liaz);
+
+
 
 
 
