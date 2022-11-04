@@ -62,6 +62,16 @@ public class Main {
 
 
 
+        kia.chooseBodyType(PassengerCar.BodyType.SEDAN.name());
+
+        bmw.chooseLoadCapacity(Trucks.LoadCapacity.NUM_1.name());
+
+        liaz.chooseCapacity(Bus1.Capacity.AVERAGE.name());
+
+        liaz.chooseCapacity("100-120 мест");
+
+        kia.chooseBodyType("Выбран Кроссовер");
+
     }
 
 
